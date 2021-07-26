@@ -37,6 +37,51 @@ the first line is optional. all existing scenarios should still be supported
 6. Delimiters can be of any length with the following format: “//[delimiter]\n” for example: “//[***]\n1***2***3” should return 6
 ---
 
-## Continue in your language
 
--   [Python](python/README.md)
+## Getting Set Up
+
+We're going to use mut.py to run our mutation tests. There are a LOT of
+options for mutation testing in python, if you find a better one, tell
+me about it.
+
+First check you have poetry installed
+
+    command -v poetry || curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+
+Installing mut.py into the environment
+
+``` shell
+poetry install
+```
+
+## First Experimentation
+
+Running mutmut
+
+``` shell
+poetry run mutmut run --paths-to-mutate=string_calculator.py --runner "python -m pytest"
+```
+
+## The Challenge
+
+### Run this for the bowling game
+
+Run
+
+``` shell
+poetry run mutmut run --paths-to-mutate=string_calculator.py --runner "python -m pytest"
+```
+
+and run
+
+```
+poetry run mutmut html &&  open html/index.html
+```
+
+1.  Improve the tests until the all the mutations you can are fixed
+2.  Is there a mutation that is a false positive (it has to do with zero being neither negative or positive)?
+
+### Run this for any code you have written this week
+
+1.  What do you see?
+2.  Fix the tests
