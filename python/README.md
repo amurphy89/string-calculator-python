@@ -64,7 +64,7 @@ poetry run mutmut run --paths-to-mutate=string_calculator.py --runner "python -m
 
 ## The Challenge
 
-### Run this for the bowling game
+### Run this for the string calc kata
 
 Run
 
@@ -81,7 +81,7 @@ poetry run mutmut html &&  open html/index.html
 1.  Improve the tests until the all the mutations you can are fixed
 2.  Is there a mutation that is a false positive (it has to do with zero being neither negative or positive)?
 
-### Run this for any code you have written this week
+### Run this for any code you have written
 
 1.  What do you see?
 2.  Fix the tests
